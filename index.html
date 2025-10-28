@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Futebol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚽ Quiz de Futebol</h1>
+            <p>Teste seus conhecimentos sobre o esporte mais popular do mundo!</p>
+        </header>
+
+        <!-- Tela de Início -->
+        <div id="tela-inicio" class="tela ativa">
+            <div class="card">
+                <h2>Bem-vindo ao Quiz!</h2>
+                <p>Responda às perguntas sobre futebol e veja quanto você sabe.</p>
+                <button id="btn-iniciar" class="btn-principal">Iniciar Quiz</button>
+            </div>
+        </div>
+
+        <!-- Tela do Quiz -->
+        <div id="tela-quiz" class="tela">
+            <div class="quiz-header">
+                <div class="progresso">
+                    <div class="barra-progresso">
+                        <div id="progresso-barra" class="progresso-preenchido"></div>
+                    </div>
+                    <span id="contador-pergunta">Pergunta 1/5</span>
+                </div>
+                <div class="pontuacao">
+                    Pontuação: <span id="pontuacao-atual">0</span>
+                </div>
+            </div>
+
+            <div class="card pergunta-card">
+                <h2 id="texto-pergunta">Pergunta aparecerá aqui</h2>
+                <div id="opcoes-container" class="opcoes-container">
+                    <!-- Opções serão inseridas via JavaScript -->
+                </div>
+                <button id="btn-proxima" class="btn-principal" disabled>Próxima</button>
+            </div>
+        </div>
+
+        <!-- Tela de Resultado -->
+        <div id="tela-resultado" class="tela">
+            <div class="card resultado-card">
+                <h2>Resultado Final</h2>
+                <div class="resultado-info">
+                    <div class="pontuacao-final">
+                        <span id="pontuacao-final">0</span>/<span id="total-perguntas">5</span>
+                    </div>
+                    <div id="mensagem-resultado" class="mensagem-resultado">
+                        <!-- Mensagem será inserida via JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="estatisticas">
+                    <h3>🏆 Ranking de Times (Exemplo)</h3>
+                    <div id="tabela-estatisticas">
+                        <!-- Tabela será inserida via JavaScript -->
+                    </div>
+                </div>
+
+                <div class="acoes-resultado">
+                    <button id="btn-reiniciar" class="btn-principal">Jogar Novamente</button>
+                    <button id="btn-simular" class="btn-secundario">Simular Partida</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Simulação de Partida -->
+        <div id="modal-partida" class="modal">
+            <div class="modal-conteudo">
+                <span class="fechar">&times;</span>
+                <h2>⚽ Simulação de Partida</h2>
+                <div id="resultado-partida" class="resultado-partida">
+                    <!-- Resultado da partida será inserido aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
